@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-14 11:45:00 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU5LRjVSQjk7MjAyMy0wOS0xNDsxMToxMTo1OSBBTTszMzI0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU5LRjVSQjk7MjAyMy0wOS0xNDsxMTo0NTowMCBBTTsxOzM0MjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="totalFORmeal" type="Real" array="False" size=""/>
+            <declare name="TIP15P" type="Real" array="False" size=""/>
+            <declare name="TIP18P" type="Real" array="False" size=""/>
+            <declare name="TIP20P" type="Real" array="False" size=""/>
+            <declare name="totalWtip15" type="Real" array="False" size=""/>
+            <declare name="totalWtip18" type="Real" array="False" size=""/>
+            <declare name="totalWtip20" type="Real" array="False" size=""/>
+            <input variable="totalFORmeal"/>
+            <assign variable="TIP15P" expression="( totalFORmeal * 0.15 )"/>
+            <assign variable="TIP18P" expression="( totalFORmeal * 0.18 )"/>
+            <assign variable="TIP20P" expression="( totalFORmeal * 0.20 )"/>
+            <assign variable="totalWtip15" expression="TIP15p + totalFORmeal"/>
+            <assign variable="totalWtip18" expression="TIP18P + totalFORmeal"/>
+            <assign variable="totalWtip20" expression="TIP20P + totalFORmeal"/>
+            <output expression="&quot;With 15% Tip: &quot;" newline="True"/>
+            <output expression="&quot;Total: &quot; &amp;totalFORmeal &amp; &quot; Tip: &quot; &amp;TIP15P &amp; &quot; Total with tip: &quot; &amp;totalWtip15" newline="True"/>
+            <output expression="&quot;With 18% Tip: &quot;" newline="True"/>
+            <output expression="&quot;Total: &quot; &amp;totalFORmeal &amp; &quot; Tip: &quot; &amp;TIP18P &amp; &quot; Total with tip: &quot; &amp;totalWtip18" newline="True"/>
+            <output expression="&quot;With 20% Tip: &quot;" newline="True"/>
+            <output expression="&quot;Total: &quot; &amp;totalFORmeal &amp; &quot; Tip: &quot; &amp;TIP20P &amp; &quot; Total with tip: &quot; &amp;totalWtip20" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
